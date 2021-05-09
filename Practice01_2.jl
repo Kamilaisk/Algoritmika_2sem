@@ -9,3 +9,11 @@ function copy_user(A::Vector{Int})
 end
 
 #б) аргумент функции - матрица (2-мерный массив)
+function copy_user(A::Matrix, dim = (2, 2))
+    len_rows, len_columns = dim
+    len_of_array = len_rows * len_columns
+    A = reshape(A, len_of_array)
+    B = copy_user(A)
+    A = reshape(A, dim)
+    B = reshape(A, dim)
+end
