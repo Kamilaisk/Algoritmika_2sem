@@ -17,7 +17,7 @@ function calcsort(a::Vector{Int}, diap::NTuple{2, Int})
     return b 
 end
 
-
+ 
 #второй вариант - некоторый отсортированный массив (вектор)
 function calcsort(a::Vector{Int}, diap::Vector{Int})
     N = length(diap)
