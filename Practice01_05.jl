@@ -52,7 +52,6 @@ function zeroescount(a::Vector{Int})
     return s
 end
 
-#Вспомогательная функция присваивания элементам одного массива для элементов другого массива.(Для срезов)
 function Assignment!(A, B)
     n = length(A)
     for i in 1:n
