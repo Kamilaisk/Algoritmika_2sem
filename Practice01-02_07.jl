@@ -11,7 +11,7 @@ function insertsort!(a)
     return a    
 end
 
-#insertsort
+#insertsort 
 insertsort(a) = insertsort!(copy(a))
 
 #insertsortPerm!
