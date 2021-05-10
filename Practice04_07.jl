@@ -1,33 +1,23 @@
 #вставка элемента массива
-function delete_at!(A::Vector{T},i::Int)::Vector{T} where T
-    new_A=Array{Int}(undef,length(A)-1)
-    j=1
-    k=1
-    while (j<length(A))
-        if k!=i
-            new_A[j]=A[k]
-            j+=1
+function delete_at!(a::Vector, inds::Vector{Int})::Vector
+    b = []
+    j = 1
+    for i in 1:length(a)
+        if j > length(inds) || i != inds[j]
+            push!(b, a[i])
+        else
+            j += 1
         end
-        k+=1
     end
-    return new_A
+    a = b
 end
 
 #добавление элемента массива
-function insert_at!(A::Vector{T},i::Int,value::T)::Vector{T} where T
-    new_A=Array{Int}(undef,length(A)+1)
-    j=1
-    k=1
-    while (j<=length(new_A))
-        if k==i
-            new_A[j]=value
-            k-=1
-            i=-1
-        else
-            new_A[j]=A[k]
-        end
-        k+=1
-        j+=1
+function insert_at!(a::Vector, index::Int, item)
+    push!(a,0)
+    N = length(a)
+    for i in N:-1:index
+        a[i] = a[i-1]
     end
-    return new_A
+    a[index] = item
 end
