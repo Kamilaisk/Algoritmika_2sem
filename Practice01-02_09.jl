@@ -1,4 +1,4 @@
-#функция, реализуюшщая быстрый поиск 
+#функция, реализуюшщая быстрый поиск  
 function quicsearch(iter, value)
     l = 1
     r = lastindex(iter)
