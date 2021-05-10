@@ -1,6 +1,6 @@
 #Реализовать алгоритм сортировки методом пузырька, написав следующие 4 обобщенные функции: bubblesort, bubblesort!, bubblesortperm, bubblesortperm!, 
 #по аналогии со встоенными функциями sort!, sort, sortperm!, sortperm, ограничившись только случаем, когда входной параметр есть одномерный массив (вектор).
-
+ 
 #bubblesort!
 function bubblesort!(a)
     n = length(a)
