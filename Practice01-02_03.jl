@@ -41,6 +41,6 @@ function bubblesortperm!(a)
     end
     return indexes
 end
-
+ 
 #bubblesortperm
 bubblesortperm(a)=bubblesortperm!(deepcopy(a))
