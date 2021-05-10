@@ -51,7 +51,7 @@ function zeroescount(a::Vector{Int})
     end
     return s
 end
-
+ 
 function Assignment!(A, B)
     n = length(A)
     for i in 1:n
