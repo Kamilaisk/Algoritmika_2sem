@@ -1,0 +1,43 @@
+struct Poly{T}
+    a::Vector{T}
+end
+
+import Base.+
+import Base.*
+import Base.%
+import Base.÷
+import Base./
+
+function +(p::Poly,q::Poly)::Poly
+    if (length(p.a)<length(q.a))
+        p,q=q,p
+    end
+    v = copy(p.a) 
+    for i in 1:length(q.a)
+        v[i]=v[i]+q.a[i]
+    end
+    return Poly{Int}(v)
+end
+
+function *(q::Int,p::Poly)::Poly
+    v = copy(p.a)
+    for i in 1:length(p.a)
+        v[i]*=q
+    end
+    return Poly{Int}(v)
+end
+
+function *(p::Poly,q::Poly)::Poly
+    v = Array{Int}(undef,length(p.a)+length(q.a)-1)
+    for i in 1:(length(p.a)+length(q.a)-1)
+        v[i]=0
+    end
+    for i in 1:(length(p.a)+length(q.a))
+        for j in 0:(i-1)
+            if (j+1<=length(p.a) && i-j<=length(q.a))
+                v[i]+=p.a[j+1]*q.a[i-j]
+            end                
+        end
+    end
+    return Poly{Int}(v)
+end
