@@ -30,3 +30,4 @@ function BubbleSortPerm!(A::Matrix)
 end
 
 BubbleSortPerm(A::Matrix) = BubbleSortPerm!(copy(A))
+ 
