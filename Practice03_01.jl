@@ -1,4 +1,4 @@
-#транспонирование матрицы с использованием массива
+#транспонирование матрицы с использованием массива 
 function transpose_with_array!(A::Matrix{T})::Matrix{T} where T
     B=Matrix{T}(undef,size(A,2),size(A,1))
     for i in 1:size(A,1)
