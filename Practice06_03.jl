@@ -1,4 +1,4 @@
-#функция, выполняющую частичную сортировку
+#функция, выполняющую частичную сортировку 
 function sort_2(A::Vector{T},b::Int64)::Vector{T} where T
     A1 = Vector{Int}(undef,0)
     A2 = Vector{Int}(undef,0)
