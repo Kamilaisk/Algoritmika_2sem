@@ -8,5 +8,5 @@ function plotsegments(segments::Vector{Tuple{Point2D,Point2D}}; kwargs...)
     return p
 end
 
-#пример использования
+#подготовка
 segments = [s for s in zip(randpoints(randn,20), randpoints(randn,20))]
