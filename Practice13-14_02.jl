@@ -1,6 +1,5 @@
 #определить тип, позволяющий итерировать все перестановки элементов заданного n элементного множества
 
-#Задача 2
 struct Permute{N} <: AbstractCombinObject
     value:Vector{Int}
 end
